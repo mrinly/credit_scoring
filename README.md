@@ -1,15 +1,15 @@
-# 🏦 Credit Risk Scoring & Default Prediction
+# Credit risk scoring & Default prediction
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
 ![Libraries](https://img.shields.io/badge/Library-Scikit--Learn%20%7C%20CatBoost%20%7C%20XGBoost%20%7C%20Pandas-orange)
 ![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
 
-## 📌 Project Overview
+## Project Overview
 
 This project focuses on building a machine learning model to predict the probability of a loan default. The goal is to classify borrowers into two categories: **reliable** (0) and **risky** (1).
 
 
-## 📂 Dataset Description
+## Dataset Description
 
 The dataset consists of **32,581** records with the following features:
 
@@ -29,7 +29,7 @@ The dataset consists of **32,581** records with the following features:
 | **`loan_status`** | **Target variable (0: Non-default, 1: Default)** | **Target** |
 
 
-## ⚙️ Methodology
+## Methodology
 
 ### 1. Data Cleaning & Preprocessing (`EDA.ipynb`)
 
@@ -73,7 +73,7 @@ Models tested:
 * XGBoost
 * CatBoost
 
-## 📊 Premilinary results
+## Premilinary results
 
 Firstly, the models were evaluated on a hold-out test set (20%) **without hyperparameters tuning** (default sklearn (catboost, xgboost) hyperparameters were used).
 The **CatBoost Classifier** showed the best performance, balancing Precision and Recall.
