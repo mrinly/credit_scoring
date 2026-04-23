@@ -1,15 +1,11 @@
 # Credit risk scoring & Default prediction
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
-![Libraries](https://img.shields.io/badge/Library-Scikit--Learn%20%7C%20CatBoost%20%7C%20XGBoost%20%7C%20Pandas-orange)
-![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
-
-## Project Overview
+## Project overview
 
 This project focuses on building a machine learning model to predict the probability of a loan default. The goal is to classify borrowers into two categories: **reliable** (0) and **risky** (1).
 
 
-## Dataset Description
+## Dataset description
 
 The dataset consists of **32,581** records with the following features:
 
@@ -31,7 +27,7 @@ The dataset consists of **32,581** records with the following features:
 
 ## Methodology
 
-### 1. Data Cleaning & Preprocessing (`EDA.ipynb`)
+### 1. Data cleaning & preprocessing (`EDA.ipynb`)
 
 * **Duplicate Removal:** Removed 165 repeated observations.
 * **Outlier Removal:** Removed records with unrealistic `person_age` and `person_emp_length` (> 100).
@@ -48,7 +44,7 @@ The dataset consists of **32,581** records with the following features:
     * *Ordinal Encoding* for `loan_grade`.
     * *One-Hot Encoding* for nominal variables (`loan_intent`, `person_home_ownership` and `age_group`).
 
-### 2. Exploratory Data Analysis (Key Insights)
+### 2. Exploratory Data Analysis (Key insights)
 
 * **Interest Rate:** Higher interest rates strongly correlate with default probability.
 * **Loan Grade:** The closer the grade to 'G', the higher the probability of default. Grade 'G' loans have nearly 100% default rate in some segments.
@@ -58,7 +54,7 @@ The dataset consists of **32,581** records with the following features:
 
 * **Loan Status** Taget variable is unbalanced. There is 25327 obsrvations with `0` (no default) and 7089 with `1` (default) in proportion ~ 78% to 22%.
 
-### 3. Modeling Strategy (`modeling.ipynb`)
+### 3. Modeling strategy (`modeling.ipynb`)
 
 Several algorithms were compared several  handling the class imbalance problem. The primary metric for evaluation is **Recall** (to minimize missed defaults) and **F1-Score**.
 
